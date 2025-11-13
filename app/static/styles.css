@@ -1,0 +1,49 @@
+* { box-sizing: border-box; }
+:root {
+  --bg: #0f172a;
+  --panel: #111827;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --primary: #4f46e5;
+  --danger: #ef4444;
+  --border: #1f2937;
+}
+html, body { margin: 0; padding: 0; }
+body {
+  background: radial-gradient(1000px 600px at 50% -10%, #1f2937 0%, var(--bg) 60%), var(--bg);
+  color: var(--text);
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+  line-height: 1.4;
+}
+header { max-width: 960px; margin: 24px auto 0; padding: 0 16px; }
+header h1 { margin: 0 0 4px; }
+header p { color: var(--muted); margin: 0 0 16px; }
+main { max-width: 960px; margin: 0 auto; padding: 0 16px 48px; display: grid; gap: 24px; }
+section { background: var(--panel); border: 1px solid var(--border); border-radius: 12px; padding: 16px; }
+section h2 { margin: 0 0 12px; }
+.row { display: flex; gap: 8px; align-items: center; }
+input[type="text"] {
+  flex: 1;
+  background: #0b1220;
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 12px;
+}
+button { cursor: pointer; border: 1px solid var(--border); border-radius: 8px; padding: 10px 14px; background: #0b1220; color: var(--text); }
+button.primary { background: var(--primary); border-color: #4338ca; }
+button.danger { background: var(--danger); border-color: #dc2626; }
+button:disabled { opacity: 0.6; cursor: not-allowed; }
+.list { list-style: none; padding: 0; margin: 12px 0 0; }
+.list-item { display: grid; grid-template-columns: 1fr auto auto; gap: 8px; align-items: center; padding: 8px; border-top: 1px solid var(--border); }
+.list-item:first-child { border-top: none; }
+.muted { color: var(--muted); font-size: 0.9em; }
+.vote-grid { display: grid; grid-template-columns: repeat(2, minmax(200px, 1fr)); gap: 12px; }
+.card { border: 1px dashed var(--border); border-radius: 12px; padding: 16px; display: grid; gap: 12px; justify-items: center; }
+.song-name { font-size: 1.2rem; font-weight: 600; text-align: center; }
+.table { width: 100%; border-collapse: collapse; }
+.table th, .table td { text-align: left; padding: 8px; border-top: 1px solid var(--border); }
+.table thead th { border-top: none; color: var(--muted); font-weight: 600; }
+.notice { margin-bottom: 12px; padding: 10px; border-radius: 8px; background: #1f2937; border: 1px solid var(--border); }
+.hidden { display: none; }
+footer { max-width: 960px; margin: 0 auto 48px; padding: 0 16px; color: var(--muted); }

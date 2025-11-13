@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Music Voting</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Music Voting</h1>
+      <p>Vote between two songs, build your leaderboard.</p>
+    </header>
+
+    <main>
+      <section id="manage">
+        <h2>Manage Songs</h2>
+        <div class="row">
+          <input id="newSongInput" type="text" placeholder="Add a song name" />
+          <button id="addSongBtn">Add</button>
+        </div>
+        <ul id="songList" class="list"></ul>
+      </section>
+
+      <section id="vote">
+        <h2>Vote</h2>
+        <div id="voteNotice" class="notice hidden"></div>
+        <div class="vote-grid">
+          <div class="card">
+            <div id="leftName" class="song-name">-</div>
+            <button id="leftVoteBtn" class="primary">Vote</button>
+          </div>
+          <div class="card">
+            <div id="rightName" class="song-name">-</div>
+            <button id="rightVoteBtn" class="primary">Vote</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="leaderboard">
+        <h2>Leaderboard</h2>
+        <div class="row">
+          <button id="refreshLbBtn">Refresh</button>
+        </div>
+        <table class="table" id="lbTable">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Song</th>
+              <th>Win Rate</th>
+              <th>Wins</th>
+              <th>Appearances</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </section>
+    </main>
+
+    <footer>
+      <small>Built with FastAPI + plain JS</small>
+    </footer>
+
+    <script src="/static/app.js" defer></script>
+  </body>
+</html>
